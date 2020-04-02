@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css_003_selector</title>
+<style type="text/css">
+
+	/* 우선순위 0002(0001+0001) */
+	body h1 {
+		color: red
+	}
+	/* 우선순위 0001 */
+	h1{
+		color: blue
+	}
+	/* 각각 우선순위 0001 */
+	h1,h2{
+		color: gray
+	}
+	/* 우선순위 0011(0001+0010(클래스)) */
+	h1.blue{
+		color: orange
+	}
+	/* 우선순위 0100 */
+	#d1{
+		color:yellow
+	}
+	/* 우선순위 0100+0010= 0110 */
+	#d1.ko{
+		color: #ff19f0
+	}
+	/* 우선순위 0100+0010+0001= 0111 */
+	#d1.ko p{
+		color: melon
+	}
+	
+	/* important는 우선순위 계산이 무시되고 무조건 적용된다. */
+	p{color:purple !important}
+	
+</style>
+</head>
+
+<body>
+
+<h1 class='blue'>title1</h1>
+	<div id="d1">
+		<div>
+			<h1 class="ko">title2</h1>
+		</div>
+	</div>
+	<p id="d1" class="ko multi">우선순위는 요소들에 적용할 스타일이 중복될 때 
+	        적용되는 스타일을 계산하는 방법이다.</p>
+
+	<p>요소들에 스타일을 적용하기 위해서는 선택자를 지정해서 설정할 수 있다.</p>
+</body>
+</html>
