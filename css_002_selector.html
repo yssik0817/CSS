@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+	
+	/* 요소에 선택자를 지정해서 스타일을 적용하는데 선택자는 우선순위를 가지고 있다.*/
+	
+	/* 선택자 우선순위*/
+	
+	/* 0001 */
+	p{
+		color:red;
+		font-size:30px;
+	}
+	
+	/* 0010 */
+	.order{
+	color: green;
+	}
+	
+	/* 0100 */
+	#unit{
+		color:orange;
+	}
+	
+	</style>
+	</head>
+	<body>
+	<p>test1</p>					<!-- inline:1000 순서 가장 높음, 권장사항은 아님 -->
+	<p class="order" id="unit" style="color:purple">test2</p>
+	<p id="unit">test3</p>
+	<p class="order">test4</p>
+</body>
+</html>
