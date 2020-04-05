@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css_021_float</title>
+
+	<style type="text/css">
+	/*
+	float(플로트):
+	1. 플로트는 박스의 위치를 부모요소의 안에서 왼쪽 또는 오른쪽으로
+		이동시키는 기능이다.
+	2. 플로트가 지정된 박스는 문서의 일반적인 흐름에 영향을 받지
+		않으면서 이돈된 위치에 떠 있다.
+	*/
+	
+	.wrap{
+		background-color:gray;
+		}
+	
+	/*div.wrap 안에있는 div*/
+	div.wrap div{
+		width: 100px;
+		height: 100px;
+		}
+	/*전부다 float: left(or right);를 넣으면 가로간다*/
+	.box1{ 
+		background-color:red;
+		float: right;
+		}
+	.box2{
+		background-color:green;
+		float: right;
+		}
+	.box3{
+		background-color:blue;
+		float: right;
+		}	
+	
+	
+	/* p{clear:both;}*/
+		/*clear:both 를 사용하면 .box들 밑으로 글씨가 나온다.*/
+		 
+	div.wrap p{clear:both;}
+	
+	div.other{
+		background-color:yellow;
+		height:500px;
+		}
+	
+	img{
+		float:right;
+		margin-left:20px;
+		}
+	
+	</style>
+
+</head>
+<body>
+	<div class="wrap">
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<p> 3Schools is optimized for learning, testing, and training. 
+		Examples might be simplified to improve reading and basic understanding. 
+		</p>
+		<span>inline</span>
+	</div>
+	<div class="other">
+		<img alt="영화배우" src="images/gosu.jpg"
+		width="200" height="300">
+		
+		<p>
+		Our website uses cookies, like almost all websites. 
+		Cookies are small text files that are placed on your computer or mobile phone when
+		 you browse websites, to help provide you with the best experience we can.
+		 Our website uses cookies, like almost all websites. 
+		Cookies are small text files that are placed on your computer or mobile phone when
+		 you browse websites, to help provide you with the best experience we can.
+		 Our website uses cookies, like almost all websites. 
+		Cookies are small text files that are placed on your computer or mobile phone when
+		 you browse websites, to help provide you with the best experience we can.
+		 Our website uses cookies, like almost all websites. 
+		Cookies are small text files that are placed on your computer or mobile phone when
+		 you browse websites, to help provide you with the best experience we can.
+		 Our website uses cookies, like almost all websites. 
+		Cookies are small text files that are placed on your computer or mobile phone when
+		 you browse websites, to help provide you with the best experience we can.
+		 Our website uses cookies, like almost all websites. 
+		</p>
+		
+		
+	</div>	
+	
+
+</body>
+</html>
